@@ -51,6 +51,9 @@ public:
 //
 //------------------------------------------------------------------------------
 class Car : public Vehicle {
+private:
+    std::string year;
+
 public:
     // constructor
     Car() : Vehicle("car") {
