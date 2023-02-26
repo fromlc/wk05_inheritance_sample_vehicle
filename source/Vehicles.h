@@ -1,4 +1,4 @@
-//----------------------------------------------------------
+//------------------------------------------------------------------------------
 // Vehicles.h
 //
 // Base class Vehicle and derived classes Car, Boat
@@ -7,14 +7,12 @@
 //      1) Redefining base class member functions, and
 //      2) Polymorphism: derived class instances have
 //         more than one type
-//----------------------------------------------------------
+//------------------------------------------------------------------------------
 #include <iostream>
 
-//----------------------------------------------------------
+//------------------------------------------------------------------------------
 // Vehicle : base class
-//
-// member data is a class identifier: 'v' for Vehicle
-//----------------------------------------------------------
+//------------------------------------------------------------------------------
 class Vehicle {
 protected:
     std::string info;
@@ -36,7 +34,7 @@ public:
     std::string getRegType() const { return regType; }
 };
 
-//----------------------------------------------------------
+//------------------------------------------------------------------------------
 // Car class is derived from Vehicle
 //
 // Car inherits from Vehicle as public:
@@ -51,7 +49,7 @@ public:
 // Car class has a constructor but no member functions.
 // Car instances inherit Vehicle's member functions.
 //
-//----------------------------------------------------------
+//------------------------------------------------------------------------------
 class Car : public Vehicle {
 public:
     // constructor
@@ -60,7 +58,7 @@ public:
     }
 };
 
-//----------------------------------------------------------
+//------------------------------------------------------------------------------
 // Boat class is derived from Vehicle
 // 
 // Boat inherits from Vehicle as public:
@@ -75,7 +73,7 @@ public:
 // Boat class has a constructor.
 // Boat instances inherit Vehicle's member functions, and
 // Boat redefines Vehicle's getRegType() member function
-//----------------------------------------------------------
+//------------------------------------------------------------------------------
 class Boat : public Vehicle {
 public:
     // Constructor
