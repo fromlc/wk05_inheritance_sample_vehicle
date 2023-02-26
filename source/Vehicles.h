@@ -48,11 +48,13 @@ public:
 //      Vehicle's public members become
 //      Car's public members
 //
-// Car redefines Vehicle's showInfo() member function
+// Car class has a constructor but no member functions.
+// Car instances inherit Vehicle's member functions.
+//
 //----------------------------------------------------------
 class Car : public Vehicle {
 public:
-    // Constructor
+    // constructor
     Car() : Vehicle("car") {
         std::cout << "new Car\n";
     }
@@ -70,9 +72,9 @@ public:
 //      Vehicle's public members become
 //      Boat's public members
 //
-//      Boat class does not declare any member functions.
-//      Boat instances inherit Vehicle's protected and 
-//      public member functions.
+// Boat class has a constructor.
+// Boat instances inherit Vehicle's member functions, and
+// Boat redefines Vehicle's getRegType() member function
 //----------------------------------------------------------
 class Boat : public Vehicle {
 public:
