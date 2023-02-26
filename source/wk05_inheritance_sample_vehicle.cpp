@@ -52,9 +52,9 @@ int main() {
     cout << "Element " << vv.size() - 1
         << " is a " << pBoat->getInfo() << "\n\n";
 
-    // each vector element displays its info
     cout << "Traversing vector vv:\n\n";
 
+    // each vector element displays its info based on its class
     for (Vehicle* pV : vv) {
         cout << pV->getInfo() << ' '
             << pV->getRegType() << '\n';
