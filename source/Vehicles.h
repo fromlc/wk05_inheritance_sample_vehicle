@@ -16,7 +16,10 @@
 // Vehicle : base class
 //------------------------------------------------------------------------------
 class Vehicle {
+private:
+
 protected:
+    char classId;
     std::string info;
     std::string regType;
 
@@ -25,6 +28,7 @@ public:
     Vehicle() : Vehicle("vehicle") { }
 
     Vehicle(const std::string _info) {
+        classId = 'v';
         info = _info;
         regType = "Plate#";
         std::cout << "new Vehicle\n";
@@ -33,7 +37,7 @@ public:
     // member functions
     std::string getInfo() const { return info; }
 
-    std::string getRegType() const { return regType; }
+    virtual std::string getRegType() const { return regType; }
 };
 
 //------------------------------------------------------------------------------
@@ -59,6 +63,7 @@ private:
 public:
     // constructor
     Car() : Vehicle("car") {
+        classId = 'c';
         std::cout << "new Car\n";
     }
 };
@@ -83,10 +88,11 @@ class Boat : public Vehicle {
 public:
     // Constructor
     Boat() : Vehicle("boat") {
+        classId = 'b';
         std::cout << "new Boat\n";
         regType = "CF#";
     }   
 
     // redefines base class member function
-    std::string getRegType() const { return regType; }
+    std::string getRegType() const { return "California boat CF"; }
 };
