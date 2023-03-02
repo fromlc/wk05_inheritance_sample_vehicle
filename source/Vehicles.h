@@ -4,9 +4,11 @@
 // Base class Vehicle and derived classes Car, Boat
 //
 // Example of 
-//      1) Redefining base class member functions, and
-//      2) Polymorphism: derived class instances have
-//         more than one type
+//      1) Redefining base class member functions:
+//         Boat redefines Vehicle::getRegType()
+//      2) Polymorphism: a derived class instance has
+//         more than one type. Here Car is-a Vehicle and
+//         Boat is-a Vehicle.
 //------------------------------------------------------------------------------
 #include <iostream>
 
