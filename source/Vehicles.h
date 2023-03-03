@@ -34,7 +34,7 @@ public:
 
     std::string getInfo() const { return info; }
 
-    std::string getRegType() const { return regType; }
+    virtual std::string getRegType() const { return regType; }
 };
 
 //------------------------------------------------------------------------------

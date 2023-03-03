@@ -61,6 +61,7 @@ int main() {
             << pV->getRegType() << '\n';
 
         // identify element's derived type for special treatment
+
         char classId = pV->getClassId();
         if (classId == 'v')
             cout << "v for Vehicle\n\n";
@@ -70,6 +71,13 @@ int main() {
             cout << "b for Boat\n\n";
         else
             cout << classId << " is unknown\n\n";
+
+        // Car and Boat class code can access Vehicle's
+        // protected member classId, but code outside the
+        // derived classes must use a getter.
+        // 
+        //pV->classId = 'u';    // This won't compile.
+
     }
 
     cout << '\n';
