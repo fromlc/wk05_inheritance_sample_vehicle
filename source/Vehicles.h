@@ -31,7 +31,7 @@ public:
         classId = 'v';
         info = _info;
         regType = "Plate#";
-        std::cout << "new Vehicle\n";
+        std::cout << "Vehicle constructor: new " << _info << "\n";
     }
 
     // member functions
