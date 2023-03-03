@@ -52,6 +52,7 @@ int main() {
     vv.push_back(pV);
     cout << "added Vehicle element\n\n";
     decltype(pV) pDeclV = pV;
+
     cout << "decltype: " << typeid(pDeclV).name() << '\n';
 
     cout << "typeid.name(): " << typeid(pV).name() << '\n';
@@ -88,7 +89,7 @@ int main() {
         cout << "decltype " << typeid(pDecl).name() << '\n';
 
         auto p = vv.at(i);
-        cout << typeid(p).name() << '\n';
+        cout << "typeid.name(): " << typeid(p).name() << '\n';
         cout << p->getInfo() << ' ' << p->getRegType() << "\n\n";
     }
 
