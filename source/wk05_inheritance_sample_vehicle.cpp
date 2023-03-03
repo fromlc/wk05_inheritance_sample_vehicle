@@ -52,12 +52,24 @@ int main() {
     cout << "Element " << vv.size() - 1
         << " is a " << pBoat->getInfo() << "\n\n";
 
+    // all vector elements are of type Vehicle*, the base class
     cout << "Traversing vector vv:\n\n";
 
-    // each vector element displays its info based on its class
+    // but each vector element displays its derived class info
     for (Vehicle* pV : vv) {
         cout << pV->getInfo() << ' '
             << pV->getRegType() << '\n';
+
+        // identify element's derived type for special treatment
+        char classId = pV->getClassId();
+        if (classId == 'v')
+            cout << "v for Vehicle\n\n";
+        else if (classId == 'c')
+            cout << "c for Car\n\n";
+        else if (classId == 'b')
+            cout << "b for Boat\n\n";
+        else
+            cout << classId << " is unknown\n\n";
     }
 
     cout << '\n';

@@ -30,6 +30,8 @@ public:
     }
 
     // member functions
+    char getClassId() const { return classId; }
+
     std::string getInfo() const { return info; }
 
     std::string getRegType() const { return regType; }
