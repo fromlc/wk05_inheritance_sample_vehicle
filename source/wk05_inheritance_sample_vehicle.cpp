@@ -63,12 +63,21 @@ int main() {
         // identify element's derived type for special treatment
 
         char classId = pV->getClassId();
-        if (classId == 'v')
+        if (classId == 'v') {
             cout << "v for Vehicle\n\n";
-        else if (classId == 'c')
+            // use a Vehicle* to treat this element like a Vehicle
+            Vehicle* p = pV;
+        }
+        else if (classId == 'c') {
             cout << "c for Car\n\n";
-        else if (classId == 'b')
+            // use a Car* to treat this element like a Car
+            Car* p = (Car*) pV;
+        }
+        else if (classId == 'b') {
             cout << "b for Boat\n\n";
+            // use a Boat* to treat this element like a Boat
+            Boat* p = (Boat*) pV;
+        }
         else
             cout << classId << " is unknown\n\n";
 
