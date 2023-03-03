@@ -17,17 +17,16 @@
 //------------------------------------------------------------------------------
 class Vehicle {
 protected:
+    char classId;
     std::string info;
     std::string regType;
 
 public:
-    // constructors
-    Vehicle() : Vehicle("vehicle") { }
+    // constructor
+    Vehicle() 
+        : classId('v'), info("vehicle"), regType("Plate#") {
 
-    Vehicle(const std::string _info) {
-        info = _info;
-        regType = "Plate#";
-        std::cout << "new Vehicle\n";
+        std::cout << "Vehicle constructor: new Vehicle\n";
     }
 
     // member functions
@@ -58,8 +57,11 @@ private:
 
 public:
     // constructor
-    Car() : Vehicle("car") {
-        std::cout << "new Car\n";
+    Car() : year("2023") {
+        classId = 'c';
+        info = "car";
+
+        std::cout << "Car constructor: new Car\n";
     }
 };
 
@@ -82,11 +84,14 @@ public:
 class Boat : public Vehicle {
 public:
     // Constructor
-    Boat() : Vehicle("boat") {
-        std::cout << "new Boat\n";
-        regType = "CF#";
+    Boat() {
+        classId = 'b';
+        info = "boat";
+        regType = ("CF#");
+
+        std::cout << "Boat constructor: new Boat\n";
     }   
 
     // redefines base class member function
-    std::string getRegType() const { return regType; }
+    std::string getRegType() const { return "California CF#"; }
 };
