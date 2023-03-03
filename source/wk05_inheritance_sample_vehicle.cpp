@@ -52,9 +52,9 @@ int main() {
     vv.push_back(pV);
     cout << "added Vehicle element\n\n";
     decltype(pV) pDeclV = pV;
-    cout << "decltype " << typeid(pDeclV).name() << '\n';
+    cout << "decltype: " << typeid(pDeclV).name() << '\n';
 
-    cout << typeid(pV).name() << '\n';
+    cout << "typeid.name(): " << typeid(pV).name() << '\n';
     cout << pV->getInfo() << ' ' << pV->getRegType() << "\n\n";
 
     Car* pC = new Car;
@@ -62,9 +62,9 @@ int main() {
     cout << "added Car element\n\n";
 
     decltype(pC) pDeclC = pC;
-    cout << "decltype " << typeid(pDeclC).name() << '\n';
+    cout << "decltype: " << typeid(pDeclC).name() << '\n';
 
-    cout << typeid(pC).name() << '\n';
+    cout << "typeid.name(): " << typeid(pC).name() << '\n';
     cout << pC->getInfo() << ' ' << pC->getRegType() << "\n\n";
 
     Boat* pB = new Boat;
@@ -72,9 +72,9 @@ int main() {
     cout << "added Boat element\n\n";
 
     decltype(pB) pDeclB = pB;
-    cout << "decltype " << typeid(pDeclB).name() << '\n';
+    cout << "decltype: " << typeid(pDeclB).name() << '\n';
 
-    cout << typeid(pB).name() << '\n';
+    cout << "typeid.name(): " << typeid(pB).name() << '\n';
     cout << pB->getInfo() << ' ' << pB->getRegType() << "\n\n";
 
     // each vector element displays its info based on its class
@@ -111,10 +111,10 @@ void showInfo(vector<Vehicle*>& v) {
 
     for (int i = 0; i < v.size(); ++i) {
         decltype(v.at(i)) pDecl = v.at(i);
-        cout << "decltype " << typeid(pDecl).name() << '\n';
+        cout << "decltype: " << typeid(pDecl).name() << '\n';
 
         auto p = v.at(i);
-        cout << typeid(p).name() << '\n';
+        cout << "typeid.name(): " << typeid(p).name() << '\n';
         cout << p->getInfo() << ' ' << p->getRegType() << "\n\n";
     }
 }
